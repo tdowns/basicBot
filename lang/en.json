@@ -90,7 +90,7 @@
     "taco": "/me @%%NAMETO%%, @%%NAMEFROM%% %%TACO%%",
 	"eatfurniture": "/me got some new furniture.",
     "nouserfurniture": "/em doesn't see %%NAME%% in room and so is spending time on http://www.wayfair.com browsing for some new furniture.",
-    "selftaco": "/me @%%NAME%%, you want to give yourself some furniture? Buy some at http://www.wayfair.com!",
+    "selffurniture": "/me @%%NAME%%, you want to give yourself some furniture? Buy some at http://www.wayfair.com!",
     "taco": "/me @%%NAMETO%%, @%%NAMEFROM%% %%FURNITURE%%",
     "cycleguardtime": "/me [@%%NAME%%] The cycleguard is set to %%TIME%% minute(s).",
     "dclookuprank": "/me [@%%NAME%%] Only bouncers and above can do a lookup for others.",
