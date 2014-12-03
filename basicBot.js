@@ -1825,7 +1825,7 @@
                                 return API.sendChat(subChat(basicBot.chat.selffurniture, {name: name}));
                             }
                             else {
-                                return API.sendChat(subChat(basicBot.chat.cookie, {nameto: user.username, namefrom: chat.un, furniture: this.getFurniture()}));
+                                return API.sendChat(subChat(basicBot.chat.furniture, {nameto: user.username, namefrom: chat.un, furniture: this.getFurniture()}));
                             }
                         }
                     }
