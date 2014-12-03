@@ -2367,7 +2367,7 @@
             },
 
             rouletteCommand: {
-                command: 'roulette',
+                command: 'roulette_Wayfair',
                 rank: 'mod',
                 type: 'exact',
                 functionality: function (chat, cmd) {
