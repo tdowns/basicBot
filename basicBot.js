@@ -2733,7 +2733,7 @@
                                 return API.sendChat(subChat(basicBot.chat.selftaco, {name: name}));
                             }
                             else {
-                                return API.sendChat(subChat(basicBot.chat.cookie, {nameto: user.username, namefrom: chat.un, taco: this.getCookie()}));
+                                return API.sendChat(subChat(basicBot.chat.taco, {nameto: user.username, namefrom: chat.un, taco: this.getCookie()}));
                             }
                         }
                     }
