@@ -1518,7 +1518,7 @@
             },
 
             commandsCommand: {
-                command: 'commands',
+                command: 'commands_wayfair',
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -1553,7 +1553,8 @@
                     'gives you an Oreo cookie with a glass of milk!',
                     'gives you a rainbow cookie made with love :heart:',
                     'gives you an old cookie that was left out in the rain, it\'s moldy.',
-                    'bakes you fresh cookies, it smells amazing.'
+                    'bakes you fresh cookies, it smells amazing.',
+                    'gives you a :cookie:.'
                 ],
                 getCookie: function () {
                     var c = Math.floor(Math.random() * this.cookies.length);
@@ -1586,6 +1587,8 @@
                     }
                 }
             },
+
+
 
             cycleCommand: {
                 command: 'cycle',
