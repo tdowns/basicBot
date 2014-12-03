@@ -1423,7 +1423,7 @@
             },
 
             banCommand: {
-                command: 'ban',
+                command: 'ban_wayfair',
                 rank: 'bouncer',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
@@ -1735,6 +1735,103 @@
                 }
             },
 
+			furnitureCommand: {
+                command: 'furniture',
+                rank: 'user',
+                type: 'startsWith',
+                furnitures: ['has given you a Magellan 24" Swivel Bar Stool with Cushion (http://www.wayfair.com/daily-sales/p/Wildon-Home-43024~JIY8990~E14480.html).',
+                    'has given you the Kittery 24" Bar Stool (Set of 2)! (http://www.wayfair.com/Wildon-Home-%C2%AE-Kittery-24-Bar-Stool-213990-CST8027.html)',
+					'has given you the Wet Look Bean Bag Lounger! (http://www.wayfair.com/Gold-Medal-Bean-Bags-Wet-Look-Bean-Bag-Lounger-300-HDSI1018.html)',
+					'has given you the Vanity Set with Mirror! (http://www.wayfair.com/Hazelwood-Home-Vanity-Set-with-Mirror-311-7143-HMC1501.html)',
+					'has given you the Chelsea 1 Light Wall Sconce! (http://www.wayfair.com/Sonneman-Chelsea-1-Light-Wall-Sconce-4290.25-SEN2545.html)',
+					'has given you the Reversible Pillow! (http://www.wayfair.com/Rizzy-Home-Reversible-Pillow-T0-RZY2682.html)',
+					'has given you the Print Pillow! (http://www.wayfair.com/Rizzy-Home-Print-Pillow-T048-RZY2681.html)',
+					'has given you the "Happily Ever After" Decorative Pillow! (http://www.wayfair.com/Alexandra-Ferguson-Happily-Ever-After-Decorative-Pillow-HAPEA-XX-FXO1032.html)',
+					'has given you the Tanner Curly Lamb Oversized Pillow! (http://www.wayfair.com/Pur-Modern-Tanner-Curly-Lamb-Oversized-Pillow-MLP-012-PURC1013.html)',
+					'has given you the Back Pillow! (http://www.wayfair.com/Maxtrix-Kids-Back-Pillow-MKS1466-MKS1466.html)',
+					'has given you the ROLL Long Bolster! (http://www.wayfair.com/La-Fete-ROLL-Long-Bolster-ROLL-XLA1016.html)',
+					'has given you the Petals Linen Embellished Decorative Pillow! (http://www.wayfair.com/Kevin-OBrien-Studio-Petals-Linen-Embellished-Decorative-Pillow-PETP-OVB1236.html)',
+					'has given you the Zoom Cushion! (http://www.wayfair.com/Nanimarquina-Zoom-Cushion-Zoom-Cushion-NMA1306.html)',
+					'has given you the Paradise "Par & Bar" Pillow! (http://www.wayfair.com/Tommy-Bahama-Outdoor-Paradise-Par-and-Bar-Pillow-8880-TBOL1024.html)',
+					'has given you the 18 Cu. Ft. Top Freezer Refrigerator! (http://www.wayfair.com/Summit-Appliance-18-Cu.-Ft.-Top-Freezer-Refrigerator-FF1935PL-SUI1179.html)',
+					'has given you the 31 Cu. Ft. French Door Refrigerator! (http://www.wayfair.com/Samsung-31-Cu.-Ft.-French-Door-Refrigerator-RF31FMEDB-UJC1382.html)',
+					'has given you the 21.65" Countertop Dishwasher! (http://www.wayfair.com/Sunpentown-21.65-Countertop-Dishwasher-SD-2201S-SPT1319.html)',
+					'has given you the 23.56" Built-In Dishwasher! (http://www.wayfair.com/Fagor-23.56-Built-In-Dishwasher-LFA-086ITXL-FGR1223.html)',
+					'has given you the Free Standing Gas Stove! (http://www.wayfair.com/Summit-Appliance-Free-Standing-Gas-Stove-PRO20-SUI1139.html)',
+					'has given you the 24" Single Electric Left Hinge Wall Oven! (http://www.wayfair.com/Fagor-24-Single-Electric-Left-Hinge-Wall-Oven-6HA200TLX-FGR1090.html)',
+					'has given you the Fabric Hammock! (http://www.wayfair.com/Algoma-Net-Company-Fabric-Hammock-AG1249.html)',
+					'has given you the Convert-A-Couch Sleeper Sofa! (http://www.wayfair.com/daily-sales/p/Handy-Living-CAC4-S1-AAA47~HLV1221~E16265.html)',
+					'has given you the Santa Rosa Loveseat! (http://www.wayfair.com/Serta-at-Home-Santa-Rosa-Loveseat-CR-43877P-XSQ1673.html)',
+					'has given you the Damen Convert-a-Couch Full Convertible Sofa! (http://www.wayfair.com/daily-sales/p/Handy-Living-C1-S1-AAA~HLV1631~E14483.html)',
+					'has given you the Loveseat! (http://www.wayfair.com/Serta-Upholstery-Loveseat-XSQ1458.html)',
+					'has given you the Marlow Sofa in Camel! (http://www.wayfair.com/daily-sales/p/Serta-Upholstery-9000S~XSQ1171~E16176.html)',
+					'has given you the Muse Living Room Collection! (http://www.wayfair.com/sofab-Muse-Living-Room-Collection-SFAB1040-SFAB1040.html)',
+					'has given you the Nob Hill Living Room Collection! (http://www.wayfair.com/Zuo-Era-Nob-Hill-Living-Room-Collection-98098-98099-ZORA1103.html)',
+					'has given you the Sleeper Living Room Collection! (http://www.wayfair.com/Wildon-Home-%C2%AE-Sleeper-Living-Room-Collection-411392-CST13394.html)',
+					'has given you the Living Room Collection! (http://www.wayfair.com/Serta-Upholstery-Living-Room-Collection-XSQ1572-XSQ1572.html)',
+					'has given you the Heather Living Room Collection! (http://www.wayfair.com/Lester-Living-Room-Collection-5280038-GNT3700.html)',
+					'has given you the Alexandria 48" TV Stand! (http://www.wayfair.com/Crosley-Alexandria-48-TV-Stand-KF10006A-CRY1504.html)',
+					'has given you the Stuart 48" TV Stand with Electric Fireplace! (http://www.wayfair.com/daily-sales/p/Wildon-Home-CSN139E~JIY11201~E16265.html)',
+					'has given you the Modern Craftsman Entertainment Center! (http://www.wayfair.com/Home-Styles-Modern-Craftsman-Entertainment-Center-88-5050-34-HO2519.html)',
+					'has given you the Hawthorne 75" TV Stand with Electric Fireplace! (http://www.wayfair.com/Real-Flame-Hawthorne-75-TV-Stand-with-Electric-Fireplace-JFP1341.html)',
+					'has given you the Traditions Torino 72" Bathroom Vanity Set! (http://www.wayfair.com/Ronbow-Traditions-Torino-72-Bathroom-Vanity-Set-62872-RNB2105.html)',
+					'has given you the HomePlus 23.3" Storage Cabinet! (http://www.wayfair.com/Sauder-HomePlus-23.3-Storage-Cabinet-411985-411963-SAU1393.html)',
+					'has given you the 20" Storage Cabinet! (http://www.wayfair.com/Akro-Mils-20-Storage-Cabinet-10164-AKR1052.html)',
+					'has given you the Ethan Computer Desk! (http://www.wayfair.com/Techni-Mobili-Ethan-Computer-Desk-RTA-8211-TMB1065.html)',
+					'has given you the Key Hook Shelf! (http://www.wayfair.com/Woodland-Home-Decor-Key-Hook-Shelf-HS24W-HS24E-WHD1013.html)',
+					'has given you the Wingback Bed! (http://www.wayfair.com/Skyline-Furniture-Wingback-Bed-SKY2908.html)',
+					'has given you the Montecito Platform Bed! (http://www.wayfair.com/DG-Casa-Montecito-Platform-Bed-DGA1139.html)',
+					'has given you the Euro Platform Bed! (http://www.wayfair.com/Fashion-Bed-Group-Euro-Platform-Bed-B91L-FB2556.html)',
+					'has given you the Back Bay Platform Bed! (http://www.wayfair.com/South-Shore-Back-Bay-Platform-Bed-3159-23X-TH1254.html)',
+					'has given you the Westbrook Sleigh Bed! (http://www.wayfair.com/Westbrook-Sleigh-Bed-B128X-GNT1582.html)',
+					'has given you the Mirage Harlow Panel Bed! (http://www.wayfair.com/Lexington-Mirage-Harlow-Panel-Bed-01-0458-13-LTN2297.html)',
+					'has given you the Nottingham Sleigh Bed! (http://www.wayfair.com/LuXeo-Nottingham-Sleigh-Bed-LXFR1005.html)',
+					'has given you the Mansion Panel Bed! (http://www.wayfair.com/Vaughan-Bassett-Mansion-Panel-Bed-VS2503-VS2503.html)',
+					'has given you the Sylvana Poster Bed! (http://www.wayfair.com/Shahrooz-Sylvana-Poster-Bed-M470-SHZ1197.html)',
+					'has given you the Rift Loft Platform Bed! (http://www.wayfair.com/Semigood-Design-Rift-Loft-Platform-Bed-Rift-LB-with-HB-SDX1015.html)',
+					'has given you the Elizabeth Panel Bed! (http://www.wayfair.com/New-World-Trading-Elizabeth-Panel-Bed-NTA1094.html)',
+					'has given you the Enchanted Forest Queen Canopy Bed! (http://www.wayfair.com/Stone-County-Ironworks-Enchanted-Forest-Queen-Canopy-Bed-914-349-SIW1336.html)',
+					'has given you the 6-Person 30-Jet Lounger Spa with Easy Plug-N-Play and LED Waterfall! (http://www.wayfair.com/Coleman-6-Person-30-Jet-Lounger-Spa-with-Easy-Plug-N-Play-and-LED-Waterfall-CLM2174.html)',
+					'has given you the Spirit® E-210™ LP Gas Grill! (http://www.wayfair.com/Weber-Spirit%C2%AE-E-210%E2%84%A2-LP-Gas-Grill-46110001-WBE1256.html)',
+					'has given you the Proust Geometrica Chair! (http://www.allmodern.com/Cappellini-Proust-Geometrica-Chair-PR-3-CPE1022.html)',
+					'has given you the Dolly Statue! (http://www.wayfair.com/Fatboy-Dolly-Statue-DLY-FTB1335.html)',
+					'has given you the Boyfriend Body Pillow! (http://www.wayfair.com/Deluxe-Comfort-Boyfriend-Body-Pillow-BFPB-001-01-DLX1013.html?piid%5B0%5D=9222572)',
+					'has given you the Pony Fabric Side Chair! (http://www.wayfair.com/Molla-Space-Inc.-Pony-Fabric-Side-Chair-HBA007-P-WVK1126.html)',
+					'has given you the Menage Yell Canvas Wall Art by Stephen Huneck! (http://www.wayfair.com/iCanvasArt-Menage-Yell-Canvas-Wall-Art-by-Stephen-Huneck-STH82-01PC3-IZN6916.html)',
+					'has given you the Liquid Concentrates - Gallon Fierce Grape (4 pack)! (http://www.wayfair.com/Gatorade-Liquid-Concentrates-1-Gallon-Fierce-Grape-4-Pack-33305-OGE1181.html)'
+                ],
+                getFurniture: function () {
+                    var f = Math.floor(Math.random() * this.cookies.length);
+                    return this.furnitures[f];
+                },
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+
+                        var space = msg.indexOf(' ');
+                        if (space === -1) {
+                            API.sendChat(basicBot.chat.eatfurniture);
+                            return false;
+                        }
+                        else {
+                            var name = msg.substring(space + 2);
+                            var user = basicBot.userUtilities.lookupUserName(name);
+                            if (user === false || !user.inRoom) {
+                                return API.sendChat(subChat(basicBot.chat.nouserfurniture, {name: name}));
+                            }
+                            else if (user.username === chat.un) {
+                                return API.sendChat(subChat(basicBot.chat.selffurniture, {name: name}));
+                            }
+                            else {
+                                return API.sendChat(subChat(basicBot.chat.cookie, {nameto: user.username, namefrom: chat.un, furniture: this.getFurniture()}));
+                            }
+                        }
+                    }
+                }
+            },
+			
             fbCommand: {
                 command: 'fb',
                 rank: 'user',
@@ -1866,7 +1963,7 @@
             },
 
             killCommand: {
-                command: 'kill',
+                command: 'kill_wayfair',
                 rank: 'bouncer',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -2165,7 +2262,7 @@
             },
 
             muteCommand: {
-                command: 'mute',
+                command: 'mute_wayfair',
                 rank: 'bouncer',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
@@ -2370,7 +2467,7 @@
             },
 
             rouletteCommand: {
-                command: 'roulette_Wayfair',
+                command: 'roulette_wayfair',
                 rank: 'mod',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -2592,7 +2689,57 @@
                     }
                 }
             },
+			
+			tacoCommand: {
+                command: 'taco',
+                rank: 'user',
+                type: 'startsWith',
+                tacos: ['has given you a beef taco with salsa and lettuce!',
+                    'has given you UNLIMITED tacos!',
+                    'has given you soggy taco. Gross.',
+                    'gives you an empty taco shell. Lame and boring.',
+                    'gave you a burrito! NOT a taco, a burrito!',
+					'ordered a giant taco for you both to share.',
+					'gave you a taco. It is yummy and delicious.',
+					'gave you half a taco (they ate the other half).',
+					'gave you a piece of cake that looks like a taco. Weird.',
+					'wanted to give you a taco but got lost on the way to the taco stand.',
+					'gives you a fish taco. Meh.',
+					'gave you an ocat.',
+					'found the best taco in the world and has given it to you!!'
+                ],
+                getTaco: function () {
+                    var t = Math.floor(Math.random() * this.cookies.length);
+                    return this.tacos[t];
+                },
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
 
+                        var space = msg.indexOf(' ');
+                        if (space === -1) {
+                            API.sendChat(basicBot.chat.eattaco);
+                            return false;
+                        }
+                        else {
+                            var name = msg.substring(space + 2);
+                            var user = basicBot.userUtilities.lookupUserName(name);
+                            if (user === false || !user.inRoom) {
+                                return API.sendChat(subChat(basicBot.chat.nousertaco, {name: name}));
+                            }
+                            else if (user.username === chat.un) {
+                                return API.sendChat(subChat(basicBot.chat.selftaco, {name: name}));
+                            }
+                            else {
+                                return API.sendChat(subChat(basicBot.chat.cookie, {nameto: user.username, namefrom: chat.un, taco: this.getCookie()}));
+                            }
+                        }
+                    }
+                }
+            },
+			
             togglemotdCommand: {
                 command: 'togglemotd',
                 rank: 'bouncer',
