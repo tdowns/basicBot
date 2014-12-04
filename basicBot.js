@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "2.4.1",
+        version: "2.5",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -831,13 +831,13 @@
                     if (Date.now() - lastPlayed < 7200000){ //within two hours
 						var media = API.getMedia();
 						API.sendChat(subChat(basicBot.chat.songknown, 
-							{name: chat.un,
-							artist: media.author,
+							{artist: media.author,
 							title: media.title,
 							plays: plays, 
 							timetotal: basicBot.roomUtilities.msToStr(Date.now() - firstPlayed),
 							lasttime: basicBot.roomUtilities.msToStr(Date.now() - lastPlayed)}));
 						basicBot.room.historyList[i].push(+new Date());
+						API.moderateForceSkip()
 						alreadyPlayed = true;
                     }
                 }
