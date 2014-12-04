@@ -2705,7 +2705,7 @@
                 type: 'startsWith',
                 tacos: ['has given you a beef taco with salsa and lettuce!',
                     'has given you UNLIMITED tacos!',
-                    'has given you soggy taco. Gross.',
+                    'has given you a soggy taco. Gross.',
                     'gives you an empty taco shell. Lame and boring.',
                     'gave you a burrito! NOT a taco, a burrito!',
 					'ordered a giant taco for you both to share.',
