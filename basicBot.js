@@ -240,8 +240,8 @@
             autodisableInterval: null,
             autodisableFunc: function () {
                 if (basicBot.status && basicBot.settings.autodisable) {
-                    API.sendChat('!afkdisable');
-                    API.sendChat('!joindisable');
+                    //API.sendChat('!afkdisable');
+                    //API.sendChat('!joindisable');
                 }
             },
             queueing: 0,
@@ -828,9 +828,11 @@
                     var firstPlayed = basicBot.room.historyList[i][1];
                     var plays = basicBot.room.historyList[i].length - 1;
                     var lastPlayed = basicBot.room.historyList[i][plays];
-                    API.sendChat(subChat(basicBot.chat.songknown, {plays: plays, timetotal: basicBot.roomUtilities.msToStr(Date.now() - firstPlayed), lasttime: basicBot.roomUtilities.msToStr(Date.now() - lastPlayed)}));
-                    basicBot.room.historyList[i].push(+new Date());
-                    alreadyPlayed = true;
+                    if (Date.now() - lastPlayed < 7200000){ //within two hours
+	                API.sendChat(subChat(basicBot.chat.songknown, {plays: plays, timetotal: basicBot.roomUtilities.msToStr(Date.now() - firstPlayed), lasttime: basicBot.roomUtilities.msToStr(Date.now() - lastPlayed)}));
+	                basicBot.room.historyList[i].push(+new Date());
+	                alreadyPlayed = true;
+                    }
                 }
             }
             if (!alreadyPlayed) {
