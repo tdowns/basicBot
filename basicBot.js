@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "2.2",
+        version: "2.2.1",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -180,7 +180,7 @@
             language: "english",
             chatLink: "https://rawgit.com/tdowns/basicBot/master/lang/en.json",
             maximumAfk: 120,
-            afkRemoval: true,
+            afkRemoval: false,
             maximumDc: 60,
             bouncerPlus: true,
             lockdownEnabled: false,
