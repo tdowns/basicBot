@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "2.2.1",
+        version: "2.4",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -829,9 +829,16 @@
                     var plays = basicBot.room.historyList[i].length - 1;
                     var lastPlayed = basicBot.room.historyList[i][plays];
                     if (Date.now() - lastPlayed < 7200000){ //within two hours
-	                API.sendChat(subChat(basicBot.chat.songknown, {plays: plays, timetotal: basicBot.roomUtilities.msToStr(Date.now() - firstPlayed), lasttime: basicBot.roomUtilities.msToStr(Date.now() - lastPlayed)}));
-	                basicBot.room.historyList[i].push(+new Date());
-	                alreadyPlayed = true;
+						var media = API.getMedia();
+						API.sendChat(subChat(basicBot.chat.songknown, 
+							{name: chat.un,
+							artist: media.author,
+							title: media.title,
+							plays: plays, 
+							timetotal: basicBot.roomUtilities.msToStr(Date.now() - firstPlayed),
+							lasttime: basicBot.roomUtilities.msToStr(Date.now() - lastPlayed)}));
+						basicBot.room.historyList[i].push(+new Date());
+						alreadyPlayed = true;
                     }
                 }
             }
