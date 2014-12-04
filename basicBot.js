@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "2.1.1",
+        version: "2.1.2",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -219,7 +219,7 @@
             website: null,
             intervalMessages: [],
             messageInterval: 5,
-            songstats: true,
+            songstats: false,
             commandLiteral: "!",
             blacklists: {
                 NSFW: "https://rawgit.com/tdowns/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
