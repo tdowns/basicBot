@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "2.1.9",
+        version: "2.2",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -1803,7 +1803,7 @@
 					'has given you the Liquid Concentrates - Gallon Fierce Grape (4 pack)! (http://www.wayfair.com/Gatorade-Liquid-Concentrates-1-Gallon-Fierce-Grape-4-Pack-33305-OGE1181.html)'
                 ],
                 getFurniture: function () {
-                    var f = Math.floor(Math.random() * this.cookies.length);
+                    var f = Math.floor(Math.random() * this.furnitures.length);
                     return this.furnitures[f];
                 },
                 functionality: function (chat, cmd) {
@@ -2711,7 +2711,7 @@
 					'found the best taco in the world and has given it to you!!'
                 ],
                 getTaco: function () {
-                    var t = Math.floor(Math.random() * this.cookies.length);
+                    var t = Math.floor(Math.random() * this.tacos.length);
                     return this.tacos[t];
                 },
                 functionality: function (chat, cmd) {
