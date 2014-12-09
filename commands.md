@@ -95,6 +95,7 @@ User
 |!emoji | | a link to a list with emoji's |
 |!eta | | shows how long before you reach the booth |
 |!fb | | links to the room's Facebook page (if set in the settings) |
+|!furniture | (@user) | give a piece of furniture to user|
 |!help | | links to an image to help get people started on plug |
 |!join | | join the roulette if it's up |
 |!leave | | leave the roulette if you joined |
@@ -102,6 +103,7 @@ User
 |!op | | links to the OverPlayed list (if set in the settings) |
 |!ping | | pong! |
 |!rules | | links to the rules (if set in the settings) |
+|!taco | (@user) | give a taco to user |
 |!theme | | links to the room's theme (if set in the settings) |
 |!website | | links to the room's website (if set in the settings) |
 |!youtube | | links to the room's youtube page (if set in the settings) |
