@@ -1,3 +1,8 @@
+everything below is from Yesmasthui's original repository
+
+------------------------------------
+
+
 basicBot
 ========
 
