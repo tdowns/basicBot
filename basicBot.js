@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "2.5.2",
+        version: "2.6.0",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -2110,6 +2110,9 @@
                     else {
                         if (basicBot.room.skippable) {
                             var dj = API.getDJ();
+							var media = API.getMedia();
+							//{artist: media.author,
+							//title: media.title,
                             var id = dj.id;
                             var name = dj.username;
                             var msgSend = '@' + name + ': ';
@@ -2142,6 +2145,7 @@
                                 if (reason.indexOf(r) !== -1) {
                                     validReason = true;
                                     msgSend += basicBot.settings.lockskipReasons[i][1];
+									msgSend += ' (' + media.author + '-' + media.title + ')';
                                 }
                             }
                             if (validReason) {
