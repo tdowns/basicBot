@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "2.6.0",
+        version: "2.6.3",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -2119,7 +2119,7 @@
                             basicBot.room.queueable = false;
 
                             if (chat.message.length === cmd.length) {
-                                API.sendChat(subChat(basicBot.chat.usedlockskip, {name: chat.un}));
+                                //API.sendChat(subChat(basicBot.chat.usedlockskip, {name: chat.un}));
                                 basicBot.roomUtilities.booth.lockBooth();
                                 setTimeout(function (id) {
                                     API.moderateForceSkip();
