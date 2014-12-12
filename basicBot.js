@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "2.6.3",
+        version: "2.6.3.1",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -3011,9 +3011,24 @@
                             API.sendChat(subChat(basicBot.chat.youtube, {name: chat.un, link: basicBot.settings.youtubeLink}));
                     }
                 }
+            },
+            
+             lCommand: {
+                command: 'L',
+                rank: 'user',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        API.sendChat(basicBot.chat.L)
+                    }
+                }
             }
         }
     };
+    
+    
 
     loadChat(basicBot.startup);
 }).call(this);
