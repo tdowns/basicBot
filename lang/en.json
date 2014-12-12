@@ -3,6 +3,7 @@
 	
     "santa": ":santa:",
     "christmas": "/me :bell: :christmas_tree: :snowman: :gift: :star2: :santa: :snowflake: Merry Christmas! :snowflake: :santa: :star2: :gift: :snowman: :christmas_tree: :bell:",
+    "L": ":heart:",
 
     "nodatafound": "No previous data found.",
     "retrievingdata": "Retrieving previously stored data.",
