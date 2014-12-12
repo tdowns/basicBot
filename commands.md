@@ -89,6 +89,7 @@ User
 |:------:|:---------:|:--------------------------------------:|
 |!autowoot | | links to PlugCubed, the advised script/plugin to use for autowooting |
 |!ba | | explains the Brand Ambassador rank |
+|!christmas | | will wish you Merry Christmas! |
 |!commands | | gives a link to the commands |
 |!cookie | (@user) | give a cookie to user |
 |!dclookup / !dc | | use dclookup on yourself |
@@ -98,11 +99,13 @@ User
 |!furniture | (@user) | give a piece of furniture to user|
 |!help | | links to an image to help get people started on plug |
 |!join | | join the roulette if it's up |
+|!L | | shares some love |
 |!leave | | leave the roulette if you joined |
 |!link | | when the user is the DJ, give a link to the current song |
 |!op | | links to the OverPlayed list (if set in the settings) |
 |!ping | | pong! |
 |!rules | | links to the rules (if set in the settings) |
+|!santa | | Makes a Santa! |
 |!taco | (@user) | give a taco to user |
 |!theme | | links to the room's theme (if set in the settings) |
 |!website | | links to the room's website (if set in the settings) |
