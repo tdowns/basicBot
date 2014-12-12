@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "2.6.4.8",
+        version: "3.0",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -205,7 +205,7 @@
                 ["meh", "People in the room don't like your song."]
             ],
             afkpositionCheck: 15,
-            afkRankCheck: "ambassador",
+            afkRankCheck: "user",
             motdEnabled: false,
             motdInterval: 5,
             motd: "Temporary Message of the  Day",
@@ -2404,6 +2404,25 @@
                     }
                 }
             },
+			
+			purgeCommand: {
+				command: 'purge',
+				rank: 'user',
+				type: 'exact',
+				functionality: function(chat, cmd) {
+					if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+					if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+					var users = API.getUsers();
+					var count = 0;
+					for (var i = 0; i<users.length; i++){
+						if (users[i].role == 0){
+							API.moderateBanUser(user.id,1,API.BAN.HOUR);
+							count++;
+							}
+					}
+					API.sendChat("/me Succesfully purged " +String(count)+ " non-Wayfair people from the room.");
+				}
+			},
 
             refreshCommand: {
                 command: 'refresh',
