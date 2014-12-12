@@ -78,7 +78,8 @@ Resident DJ
 
 |Command | Arguments |  Description |
 |:------:|:---------:|:--------------------------------------:|
-|!link | | give a link to the current song
+|!link | | give a link to the current song|
+|!purge | | removes all non staff from the room|
 
 
 
