@@ -2149,7 +2149,7 @@
                                 }
                             }
                             if (validReason) {
-                                API.sendChat(subChat(basicBot.chat.usedlockskip, {name: chat.un}));
+                                //API.sendChat(subChat(basicBot.chat.usedlockskip, {name: chat.un}));
                                 basicBot.roomUtilities.booth.lockBooth();
                                 setTimeout(function (id) {
                                     API.moderateForceSkip();
