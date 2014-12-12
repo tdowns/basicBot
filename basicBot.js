@@ -1541,7 +1541,7 @@
             },
 
             commandsCommand: {
-                command: 'commands_wayfair',
+                command: 'commands',
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
