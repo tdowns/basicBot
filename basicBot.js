@@ -202,7 +202,7 @@
                 ["sound", "The song you played had bad sound quality or no sound. "],
                 ["nsfw", "The song you contained was NSFW (image or sound). "],
                 ["unavailable", "The song you played was not available for some users. "],
-                ["meh", "People in the room don't like your song."]
+                ["meh", "People in the room don't like your song. "]
             ],
             afkpositionCheck: 15,
             afkRankCheck: "user",
