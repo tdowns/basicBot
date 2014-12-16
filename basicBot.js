@@ -2143,6 +2143,7 @@
                             var reason = msg.substring(cmd.length + 1);
                             console.log(reason);
                             console.log(basicBot.settings.lockskipReasons);
+                            console.log(basicBot.settings.lockskipReasons.length);
                             for (var i = 0; i < basicBot.settings.lockskipReasons.length; i++) {
                                 var r = basicBot.settings.lockskipReasons[i][0];
                                 console.log(r);
