@@ -2142,6 +2142,7 @@
                             var msg = chat.message;
                             var reason = msg.substring(cmd.length + 1);
                             console.log(reason);
+                            console.log(basicBot.settings.lockskipReasons);
                             for (var i = 0; i < basicBot.settings.lockskipReasons.length; i++) {
                                 var r = basicBot.settings.lockskipReasons[i][0];
                                 console.log(r);
