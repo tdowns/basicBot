@@ -2141,13 +2141,17 @@
                             var validReason = false;
                             var msg = chat.message;
                             var reason = msg.substring(cmd.length + 1);
+                            console.log(reason);
                             for (var i = 0; i < basicBot.settings.lockskipReasons.length; i++) {
                                 var r = basicBot.settings.lockskipReasons[i][0];
+                                console.log(r);
+                                console.log(reason.indexOf(r));
                                 if (reason.indexOf(r) !== -1) {
                                     validReason = true;
                                     msgSend += basicBot.settings.lockskipReasons[i][1];
 									msgSend += ' (' + media.author + '-' + media.title + ')';
                                 }
+                                console.log(validReason);
                             }
                             if (validReason) {
                                 //API.sendChat(subChat(basicBot.chat.usedlockskip, {name: chat.un}));
