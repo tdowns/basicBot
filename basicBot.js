@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "3.1",
+        version: "3.2",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -2120,7 +2120,7 @@
                             basicBot.room.queueable = false;
 
                             if (chat.message.length === cmd.length) {
-                                //API.sendChat(subChat(basicBot.chat.usedlockskip, {name: chat.un}));
+                                API.sendChat(subChat(basicBot.chat.usedlockskip, {name: chat.un}));
                                 basicBot.roomUtilities.booth.lockBooth();
                                 setTimeout(function (id) {
                                     API.moderateForceSkip();
@@ -2129,7 +2129,7 @@
                                         basicBot.room.skippable = true
                                     }, 5 * 1000);
                                     setTimeout(function (id) {
-                                        basicBot.userUtilities.moveUser(id, basicBot.settings.lockskipPosition, false);
+                                        //basicBot.userUtilities.moveUser(id, basicBot.settings.lockskipPosition, false);
                                         basicBot.room.queueable = true;
                                         setTimeout(function () {
                                             basicBot.roomUtilities.booth.unlockBooth();
@@ -2156,7 +2156,7 @@
                                // console.log(validReason);
                             }
                             if (validReason) {
-                                //API.sendChat(subChat(basicBot.chat.usedlockskip, {name: chat.un}));
+                                API.sendChat(subChat(basicBot.chat.usedlockskip, {name: chat.un}));
                                 basicBot.roomUtilities.booth.lockBooth();
                                 setTimeout(function (id) {
                                     API.moderateForceSkip();
@@ -2166,7 +2166,7 @@
                                         basicBot.room.skippable = true
                                     }, 5 * 1000);
                                     setTimeout(function (id) {
-                                        basicBot.userUtilities.moveUser(id, basicBot.settings.lockskipPosition, false);
+                                        //basicBot.userUtilities.moveUser(id, basicBot.settings.lockskipPosition, false);
                                         basicBot.room.queueable = true;
                                         setTimeout(function () {
                                             basicBot.roomUtilities.booth.unlockBooth();
