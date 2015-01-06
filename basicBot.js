@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "3.2",
+        version: "3.3",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -2422,11 +2422,11 @@
 					var count = 0;
 					for (var i = 0; i<users.length; i++){
 						if (users[i].role == 0){
-							API.moderateBanUser(user.id,1,API.BAN.HOUR);
+							API.moderateBanUser(users[i].id,1,API.BAN.HOUR);
 							count++;
 							}
 					}
-					API.sendChat("/me Succesfully purged " +String(count)+ " non-Wayfair people from the room.");
+					API.sendChat("/me Purging " +String(count)+ " non-Wayfair people from the room.");
 				}
 			},
 
