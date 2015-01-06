@@ -2,7 +2,7 @@ Commands:
 =========
 
 X specifies a number.
-Arguments between ( ) are optional
+Arguments between ( ) are optional.
 
 
 Manager
