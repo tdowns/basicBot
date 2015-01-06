@@ -170,7 +170,7 @@
         name: "dash_init",
         loggedInID: null,
         scriptLink: "https://rawgit.com/tdowns/basicBot/master/basicBot.js",
-        cmdLink: "http://git.io/245Ppg",
+        cmdLink: "http://bit.ly/1yxIXZF",
         chatLink: "https://rawgit.com/tdowns/basicBot/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
