@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "3.3",
+        version: "3.3.1",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -2517,9 +2517,23 @@
                     }
                 }
             },
+            
+            
+            rollCommand: {
+            	command: 'roll',
+            	rank: 'user',
+            	type: 'exact',
+            	functionality: function (chat, cmd){
+            	    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+            	    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        API.sendChat("/me " + String(Math.floor(Math.random()*100 + 1)))
+                    }
+            	}
+            },
 
             rouletteCommand: {
-                command: 'roulette_wayfair',
+                command: 'roulette',
                 rank: 'mod',
                 type: 'exact',
                 functionality: function (chat, cmd) {
