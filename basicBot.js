@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "3.3.1",
+        version: "3.3.8",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -837,7 +837,8 @@
 							plays: plays, 
 							timetotal: basicBot.roomUtilities.msToStr(Date.now() - firstPlayed),
 							lasttime: basicBot.roomUtilities.msToStr(Date.now() - lastPlayed)}));
-						basicBot.room.historyList[i].push(+new Date());
+						// don't add to history list because it gets skipped
+						//basicBot.room.historyList[i].push(+new Date());
 						API.moderateForceSkip()
 						alreadyPlayed = true;
                     }
