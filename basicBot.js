@@ -189,7 +189,7 @@
             cycleGuard: true,
             maximumCycletime: 10,
             timeGuard: true,
-            maximumSongLength: 9.04,
+            maximumSongLength: 9.5,
             autodisable: true,
             commandCooldown: 30,
             usercommandsEnabled: true,
