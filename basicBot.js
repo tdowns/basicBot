@@ -2168,7 +2168,7 @@
                                 setTimeout(function (id) {
                                     API.moderateForceSkip();
                                     basicBot.room.skippable = false;
-                                    API.sendChat(msgSend);
+                                    API.sendChat('/em ' + msgSend);
                                     setTimeout(function () {
                                         basicBot.room.skippable = true
                                     }, 5 * 1000);
