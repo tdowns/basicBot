@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "3.5",
+        version: "3.5.1",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -935,7 +935,7 @@
                 }
             }
             for (var k = 0; k < basicBot.chatUtilities.curses.length; k++) {
-            	if (msg.indexOf(basicBot.chatUtilities.curses[k]) = -1){
+            	if (msg.indexOf(basicBot.chatUtilities.curses[k]) == -1){
             		API.sendChat("/em We don't allow NSFW language in this room.");
             		return true;
             	}
