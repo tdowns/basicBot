@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "3.3.8",
+        version: "3.5.9",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -934,6 +934,12 @@
                     return true;
                 }
             }
+            for (var k = 0; k < basicBot.chatUtilities.curses.length; k++) {
+            	if (msg.indexOf(basicBot.chatUtilities.curses[k]) == -1){
+            		API.sendChat("/em We don't allow NSFW language in this room.");
+            		return true;
+            	}
+            }
             return false;
         },
         chatUtilities: {
@@ -1074,7 +1080,7 @@
                 'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
             ],
             curses: [
-                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka'
+                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka', 'fag', 'fuck you', 'fuck', 'fucking', 'shit', 'bitch', 'cunt', 'ass'
             ]
         },
         connectAPI: function () {
@@ -2162,7 +2168,7 @@
                                 setTimeout(function (id) {
                                     API.moderateForceSkip();
                                     basicBot.room.skippable = false;
-                                    API.sendChat(msgSend);
+                                    API.sendChat('/em ' + msgSend);
                                     setTimeout(function () {
                                         basicBot.room.skippable = true
                                     }, 5 * 1000);
