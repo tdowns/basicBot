@@ -2433,7 +2433,7 @@
 							count++;
 							}
 					}
-					API.sendChat("/me Purging " +String(count)+ " non-Wayfair people from the room.");
+					API.sendChat("/me Purging " +String(count)+ " non-Wayfairian(s) from the room.");
 				}
 			},
 
