@@ -109,8 +109,11 @@
         }
         var json_sett = null;
         var roominfo = document.getElementById("room-info");
-        if (info != null)
+        console.log(info);
+        console.log(info!= null);
+        if (info != null){
             info = roominfo.textContent;
+        }
         var ref_bot = "@basicBot=";
         var ind_ref = info.indexOf(ref_bot);
         if (ind_ref > 0) {
