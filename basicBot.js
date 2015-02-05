@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "3.5.9",
+        version: "3.7",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -901,6 +901,13 @@
         },
         chatcleaner: function (chat) {
             if (!basicBot.settings.filterChat) return false;
+            for (var k = 0; k < basicBot.chatUtilities.curses.length; k++) {
+            	if (msg.indexOf(basicBot.chatUtilities.curses[k]) != -1){
+            		API.sendChat("/em We don't allow NSFW language in this room.");
+            		console.log("NSFW deletion: " + msg);
+            		return true;
+            	}
+            }
             if (basicBot.userUtilities.getPermission(chat.uid) > 1) return false;
             var msg = chat.message;
             var containsLetters = false;
@@ -933,12 +940,6 @@
                     API.sendChat(subChat(basicBot.chat.spam, {name: chat.un}));
                     return true;
                 }
-            }
-            for (var k = 0; k < basicBot.chatUtilities.curses.length; k++) {
-            	if (msg.indexOf(basicBot.chatUtilities.curses[k]) == -1){
-            		API.sendChat("/em We don't allow NSFW language in this room.");
-            		return true;
-            	}
             }
             return false;
         },
