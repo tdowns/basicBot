@@ -109,29 +109,26 @@
         }
         var json_sett = null;
         var roominfo = document.getElementById("room-info");
-        console.log(info);
-        console.log(info!= null);
-        if (info != null){
+        if (roominfo != null){
             info = roominfo.textContent;
-        }
-        var ref_bot = "@basicBot=";
-        var ind_ref = info.indexOf(ref_bot);
-        if (ind_ref > 0) {
-            var link = info.substring(ind_ref + ref_bot.length, info.length);
-            var ind_space = null;
-            if (link.indexOf(" ") < link.indexOf("\n")) ind_space = link.indexOf(" ");
-            else ind_space = link.indexOf("\n");
-            link = link.substring(0, ind_space);
-            $.get(link, function (json) {
-                if (json !== null && typeof json !== "undefined") {
-                    json_sett = JSON.parse(json);
-                    for (var prop in json_sett) {
-                        basicBot.settings[prop] = json_sett[prop];
+            var ref_bot = "@basicBot=";
+            var ind_ref = info.indexOf(ref_bot);
+            if (ind_ref > 0) {
+                var link = info.substring(ind_ref + ref_bot.length, info.length);
+                var ind_space = null;
+                if (link.indexOf(" ") < link.indexOf("\n")) ind_space = link.indexOf(" ");
+                else ind_space = link.indexOf("\n");
+                link = link.substring(0, ind_space);
+                $.get(link, function (json) {
+                    if (json !== null && typeof json !== "undefined") {
+                        json_sett = JSON.parse(json);
+                        for (var prop in json_sett) {
+                            basicBot.settings[prop] = json_sett[prop];
+                        }
                     }
-                }
-            });
+                });
+            }
         }
-
     };
 
     String.prototype.splitBetween = function (a, b) {
