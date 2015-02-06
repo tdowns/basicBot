@@ -166,7 +166,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "3.6",
+        version: "3.6.1",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -2534,7 +2534,7 @@
             	    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
             	    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        API.sendChat("/me " + chat.un + " rolled " + String(Math.floor(Math.random()*100 + 1)))
+                        API.sendChat("/me @" + chat.un + " rolled " + String(Math.floor(Math.random()*100 + 1)))
                     }
             	}
             },
