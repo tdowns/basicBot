@@ -222,6 +222,7 @@
             intervalMessages: [],
             messageInterval: 5,
             songstats: false,
+            autoWoot: true,
             commandLiteral: "!",
             blacklists: {
                 NSFW: "https://rawgit.com/tdowns/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
@@ -823,6 +824,10 @@
                     return API.moderateForceSkip();
                 }
             }
+            
+            if (basicBot.settings.autoWoot) {
+            	document.getElementById("woot").click();
+            }
 
             var alreadyPlayed = false;
             for (var i = 0; i < basicBot.room.historyList.length; i++) {
@@ -1196,6 +1201,9 @@
                 emojibutton[0].click();
             }
             loadChat(API.sendChat(subChat(basicBot.chat.online, {botname: basicBot.settings.botName, version: basicBot.version})));
+            if (basicBot.settings.autoWoot){
+                document.getElementById("woot").click();
+            }
         },
         commands: {
             executable: function (minRank, chat) {
@@ -1421,7 +1429,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        API.sendChat(basicBot.chat.autowoot);
+                        basicBot.settings.autoWoot = !basicBot.settings.autoWoot;
                     }
                 }
             },
