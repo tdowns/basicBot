@@ -2254,6 +2254,19 @@
                     }
                 }
             },
+            
+            mehCommand: {
+                command: 'meh',
+                rank: 'manager',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+            	        document.getElementById("meh").click();
+                    }
+                }
+            },
 
             motdCommand: {
                 command: 'motd',
@@ -3053,6 +3066,19 @@
                     else {
                         if (typeof basicBot.settings.website === "string")
                             API.sendChat(subChat(basicBot.chat.website, {link: basicBot.settings.website}));
+                    }
+                }
+            },
+            
+            wootCommand: {
+                command: 'woot',
+                rank: 'manager',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+            	        document.getElementById("woot").click();
                     }
                 }
             },
