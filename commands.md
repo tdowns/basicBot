@@ -11,6 +11,7 @@ Manager
 |Command | Arguments |  Description |
 |:------:|:---------:|:--------------------------------------:|
 |!afklimit | X | sets the maximum afk time |
+|!autowoot | | toggle the bot's autowooting (effect is seen on next song) |
 |!clearchat | |clears the chat |
 |!cycle | | toggle DJ cycle |
 |!cycletimer | X | set the maximum DJ cycle time for when cycleguard is enabled |
@@ -18,7 +19,6 @@ Manager
 |!refresh | | refreshes the browser of whoever runs the bot |
 |!usercmdcd | X | set the cooldown on commands by grey users |
 |!usercommands | | toggle user commands |
-|!autowoot | | toggle the bot's autowooting (effect is seen on next song) |
 
 Bouncer+
 --------
