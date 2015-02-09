@@ -1934,10 +1934,10 @@
 							
 							setTimeout(function(){
 								document.getElementById("dialog-playlist-delete").childNodes[2].childNodes[1].click();},
-							300);
+							500);
 							},
-						300);}, 
-					300);
+						500);}, 
+					500);
                                 }
                         }
                 },
