@@ -166,7 +166,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "3.7",
+        version: "3.7.1",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -1423,13 +1423,16 @@
 
             autowootCommand: {
                 command: 'autowoot',
-                rank: 'user',
+                rank: 'mod',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         basicBot.settings.autoWoot = !basicBot.settings.autoWoot;
+                        if (basicBot.settings.autoWoot){
+            	            document.getElementById("woot").click();
+                        }
                     }
                 }
             },
