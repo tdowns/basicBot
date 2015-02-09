@@ -1907,6 +1907,41 @@
                 }
             },
 
+	    grabCommand: {
+                        command: 'grab',
+                        rank: 'manager',
+                        type: 'exact',
+                        functionality: function(chat, cmd){
+                                if(this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                                if( !basicBot.commands.executable(this.rank, chat) ) return void (0);
+                                else{
+                                    //grab song
+					document.getElementById("grab").click();
+					
+					// name playlist
+					document.getElementById("dialog-playlist-create").childNodes[1].childNodes[0].childNodes[3].childNodes[1].value = "playlist";
+					setTimeout(function(){
+						document.getElementById("dialog-playlist-create").childNodes[2].childNodes[1].click();
+						setTimeout(function(){
+							// delete playlist
+							document.getElementById("playlist-delete-button").click();
+					
+							// to get number to enter
+							var numbers = document.getElementById("dialog-playlist-delete").childNodes[1].childNodes[1].childNodes[1].innerHTML.split(' ')[1];
+					
+							// input number
+							document.getElementById("dialog-playlist-delete").childNodes[1].childNodes[1].childNodes[3].childNodes[1].value = numbers;
+							
+							setTimeout(function(){
+								document.getElementById("dialog-playlist-delete").childNodes[2].childNodes[1].click();},
+							300);
+							},
+						300);}, 
+					300);
+                                }
+                        }
+                },
+
             helpCommand: {
                 command: 'help',
                 rank: 'user',
