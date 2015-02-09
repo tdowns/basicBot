@@ -18,6 +18,7 @@ Manager
 |!refresh | | refreshes the browser of whoever runs the bot |
 |!usercmdcd | X | set the cooldown on commands by grey users |
 |!usercommands | | toggle user commands |
+|!autowoot | | toggle the bot's autowooting (effect is seen on next song) |
 
 Bouncer+
 --------
