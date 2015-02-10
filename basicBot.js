@@ -1926,7 +1926,7 @@
 						var b = true;
 						
 						while(b){
-						    if (document.getElementById("playlist-delete-button") <> null)
+						    if (document.getElementById("playlist-delete-button") != null)
 							b = false;
 						}
 						
