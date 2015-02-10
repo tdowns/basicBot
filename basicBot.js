@@ -1922,6 +1922,14 @@
 					document.getElementById("dialog-playlist-create").childNodes[1].childNodes[0].childNodes[3].childNodes[1].value = "playlist";
 					setTimeout(function(){
 						document.getElementById("dialog-playlist-create").childNodes[2].childNodes[1].click();
+						
+						var b = true;
+						
+						while(b){
+						    if (document.getElementById("playlist-delete-button") <> null)
+							b = false;
+						}
+						
 						setTimeout(function(){
 							// delete playlist
 							document.getElementById("playlist-delete-button").click();
