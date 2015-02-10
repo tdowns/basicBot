@@ -1923,13 +1923,6 @@
 					setTimeout(function(){
 						document.getElementById("dialog-playlist-create").childNodes[2].childNodes[1].click();
 						
-						var b = true;
-						
-						while(b){
-						    if (document.getElementById("playlist-delete-button") != null)
-							b = false;
-						}
-						
 						setTimeout(function(){
 							// delete playlist
 							document.getElementById("playlist-delete-button").click();
@@ -1944,8 +1937,8 @@
 								document.getElementById("dialog-playlist-delete").childNodes[2].childNodes[1].click();},
 							500);
 							},
-						500);}, 
-					500);
+						1000);}, 
+					250);
                                 }
                         }
                 },
