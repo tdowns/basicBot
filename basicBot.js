@@ -166,7 +166,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "3.8",
+        version: "3.8.1",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -1204,6 +1204,9 @@
             if (basicBot.settings.autoWoot){
                 document.getElementById("woot").click();
             }
+            var x = document.getElementById("playback");
+            x.parentNode.removeChild(x);
+            
         },
         commands: {
             executable: function (minRank, chat) {
