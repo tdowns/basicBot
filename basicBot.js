@@ -166,7 +166,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "3.8.1",
+        version: "3.8.1.6",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -202,7 +202,7 @@
                 //["mix", "You played a mix, which is against the rules. "],
                 ["sound", "The song you played had bad sound quality or no sound. "],
                 ["nsfw", "The song you contained was NSFW (image or sound). "],
-                ["unavailable", "The song you played was not available for some users. "],
+                ["unavailable", "The song you played was not available for some users. Please consider replacing it with a different version or song in your playlist."],
                 ["meh", "People in the room don't like your song. "]
             ],
             afkpositionCheck: 15,
