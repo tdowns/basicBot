@@ -19,6 +19,7 @@ Manager
 |!refresh | | refreshes the browser of whoever runs the bot |
 |!usercmdcd | X | set the cooldown on commands by grey users |
 |!usercommands | | toggle user commands |
+|!skiprepeats | | toggle whether or not to allow repeated songs (2 hour timeframe) |
 
 Bouncer+
 --------
