@@ -166,7 +166,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "3.8.1.6",
+        version: "3.9",
         status: false,
         name: "dash_init",
         loggedInID: null,
