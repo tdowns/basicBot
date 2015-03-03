@@ -223,6 +223,7 @@
             messageInterval: 5,
             songstats: false,
             autoWoot: true,
+			skipRepeats: true,
             commandLiteral: "!",
             blacklists: {
                 NSFW: "https://rawgit.com/tdowns/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
@@ -835,18 +836,20 @@
                     var firstPlayed = basicBot.room.historyList[i][1];
                     var plays = basicBot.room.historyList[i].length - 1;
                     var lastPlayed = basicBot.room.historyList[i][plays];
-                    if (Date.now() - lastPlayed < 7200000){ //within two hours
-						var media = API.getMedia();
-						API.sendChat(subChat(basicBot.chat.songknown, 
-							{artist: media.author,
-							title: media.title,
-							plays: plays, 
-							timetotal: basicBot.roomUtilities.msToStr(Date.now() - firstPlayed),
-							lasttime: basicBot.roomUtilities.msToStr(Date.now() - lastPlayed)}));
-						// don't add to history list because it gets skipped
-						//basicBot.room.historyList[i].push(+new Date());
-						API.moderateForceSkip()
-						alreadyPlayed = true;
+					if(basicBot.settings.skipRepeats){
+						if (Date.now() - lastPlayed < 7200000){ //within two hours
+							var media = API.getMedia();
+							API.sendChat(subChat(basicBot.chat.songknown, 
+								{artist: media.author,
+								title: media.title,
+								plays: plays, 
+								timetotal: basicBot.roomUtilities.msToStr(Date.now() - firstPlayed),
+								lasttime: basicBot.roomUtilities.msToStr(Date.now() - lastPlayed)}));
+							// don't add to history list because it gets skipped
+							//basicBot.room.historyList[i].push(+new Date());
+							API.moderateForceSkip()
+							alreadyPlayed = true;
+						}
                     }
                 }
             }
@@ -1439,7 +1442,7 @@
                     }
                 }
             },
-
+			
             baCommand: {
                 command: 'ba',
                 rank: 'user',
@@ -1531,7 +1534,7 @@
                 }
             },
 			
-			christmastCommand: {
+			christmasCommand: {
                 command: 'christmas',
                 rank: 'user',
                 type: 'exact',
@@ -2677,6 +2680,24 @@
                         }, 5 * 1000);
 
                     }
+                }
+            },
+			
+			skipRepeatsCommand: {
+                command: 'skiprepeats',
+                rank: 'mod',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        basicBot.settings.skipRepeats = !basicBot.settings.skipRepeats;
+                        }
+                    }
+					if(basicBot.settings.skipRepeats)
+						API.sendChat('/em Ok, I will skip any songs that have been played in the past two hours');
+					else
+						API.sendChat('/em You have free reign to play any song over and over again.');
                 }
             },
 
