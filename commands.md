@@ -16,10 +16,10 @@ Manager
 |!cycle | | toggle DJ cycle |
 |!cycletimer | X | set the maximum DJ cycle time for when cycleguard is enabled |
 |!locktimer | X | set the maximum time the waitlist can be locked if lockguard is enabled |
+|!skiprepeats | | toggle whether or not to allow repeated songs (2 hour timeframe) |
 |!refresh | | refreshes the browser of whoever runs the bot |
 |!usercmdcd | X | set the cooldown on commands by grey users |
 |!usercommands | | toggle user commands |
-|!skiprepeats | | toggle whether or not to allow repeated songs (2 hour timeframe) |
 
 Bouncer+
 --------
