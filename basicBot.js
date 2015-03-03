@@ -2692,13 +2692,15 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         basicBot.settings.skipRepeats = !basicBot.settings.skipRepeats;
-                        }
+                        
                      
 					if (basicBot.settings.skipRepeats)
 						API.sendChat('/em Ok, I will skip any songs that have been played in the past two hours');
 					else
 						API.sendChat('/em You have free reign to play any song over and over again.');
-                }
+                
+                    }
+                    }
             },
 
             songstatsCommand: {
