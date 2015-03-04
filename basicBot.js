@@ -166,7 +166,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "3.9",
+        version: "3.9.1",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -2695,7 +2695,7 @@
                         
                      
 					if (basicBot.settings.skipRepeats)
-						API.sendChat('/em Ok, I will skip any songs that have been played in the past two hours');
+						API.sendChat('/em Any songs that have been repeated (within a 2 hour window) will be skipped.');
 					else
 						API.sendChat('/em You have free reign to play any song over and over again.');
                 
