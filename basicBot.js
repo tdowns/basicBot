@@ -853,7 +853,7 @@
                     }
                 }
             }
-            if (!alreadyPlayed) {
+            if (!alreadyPlayed && basicBot.settings.skipRepeats) {
                 basicBot.room.historyList.push([obj.media.cid, +new Date()]);
             }
             var newMedia = obj.media;
