@@ -90,7 +90,7 @@ User
 
 |Command | Arguments |  Description |
 |:------:|:---------:|:--------------------------------------:|
-|!autowoot | | links to PlugCubed, the advised script/plugin to use for autowooting |
+|_command removed_ | | links to PlugCubed, the advised script/plugin to use for autowooting |
 |!ba | | explains the Brand Ambassador rank |
 |!christmas | | will wish you Merry Christmas! |
 |!commands | | gives a link to the commands |
