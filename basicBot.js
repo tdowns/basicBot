@@ -166,7 +166,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "3.9.1",
+        version: "3.9.2",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -1088,7 +1088,7 @@
                 'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
             ],
             curses: [
-                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka', 'fag', 'fuck you', 'fuck', 'fucking', 'shit', 'bitch', 'cunt', 'ass'
+                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka', 'fag', 'fuck you', 'fuck', 'fucking', 'shit', 'bitch', 'cunt'
             ]
         },
         connectAPI: function () {
