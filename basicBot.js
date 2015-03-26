@@ -166,7 +166,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "3.9.3",
+        version: "3.10",
         status: false,
         name: "dash_init",
         loggedInID: null,
@@ -829,7 +829,9 @@
             if (basicBot.settings.autoWoot) {
             	document.getElementById("woot").click();
             }
-
+	if ((API.getMedia().author + ' ' + API.getMedia().title).indexOf("It's All Falling Into Place") > -1){
+		API.sendChat("/em This is my favorite song!")
+	}
             var alreadyPlayed = false;
             for (var i = 0; i < basicBot.room.historyList.length; i++) {
                 if (basicBot.room.historyList[i][0] === obj.media.cid) {
